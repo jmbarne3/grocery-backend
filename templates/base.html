@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{ url_for( 'static', filename='css/style.min.css' ) }}">
+
+    <title>My Grocery App{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+    <script src="{{ url_for( 'static', filename='js/style.min.js' ) }}"></script>
+    {% block scripts %}{% endblock %}
+  </body>
+</html>
