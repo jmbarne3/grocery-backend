@@ -50,11 +50,15 @@ class Ingredient(models.Model):
         else:
             return str(self.amount)
 
-    def __unicode__(self):
+    @property
+    def simple_repr(self):
         return f"{self.simple_amount} {self.measurement.abbr} {self.item.name}"
 
+    def __unicode__(self):
+        return self.simple_repr
+
     def __str__(self):
-        return f"{self.simple_amount} {self.measurement.abbr} {self.item.name}"
+        return self.simple_repr
 
 
 class Recipe(models.Model):

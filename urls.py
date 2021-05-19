@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url, include
+
+from groceries.urls import urlpatterns as grocerypatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'api/v1/groceries/',
+        include('groceries.urls')
+    ),
 ]

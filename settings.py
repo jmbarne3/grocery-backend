@@ -25,6 +25,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # 3rd party
+    'rest_framework',
+    'social_django',
+
     # Custom apps
     'groceries',
 ]
